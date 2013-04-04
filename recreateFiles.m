@@ -1,9 +1,14 @@
+% rewrites the provided data into usable files
+% (which can be used in R)
+%   1. EQ count (using declustered catalog)
+%   2. SSN
+
 clear all;
 
-%% Get EQ count per month/year (including "zero months")
+
+%% Get monthly/yearly EQ count
+
 NEICdecluster = load('data/NEIC-decluster');
-
-
 [A,a,c] = unique(NEICdecluster(:,1:2),'rows');
 n = hist(c,length(a))';
 
@@ -19,9 +24,7 @@ for year=min(NEICdecluster(:,1)):max(NEICdecluster(:,1))
     end
 end
 
-
 % do per year
-
 j = 1;
 for year=min(NEICdecluster(:,1)):max(NEICdecluster(:,1))
         subs = find(EQs_mon(:,1)==year);
@@ -32,9 +35,7 @@ end
 
 
 
-%% Rewrite mon-group-num (SSN)
-
-% SSN_mon = importdata('mon-group-num');
+%% Rewrite SSN
 
 fid = fopen('data/SSN');
 c = textscan(fid, '%f %f %f %f %f');
@@ -42,7 +43,7 @@ fclose(fid);
 
 SSN_mon = cell2mat(c(:,[1 2 4]));
 
-BIN = 5;
+BIN = 5; % set the bin interval
 
 SSN_monbin = [SSN_mon(:,1:2) round(SSN_mon(:,3)/BIN)*BIN];
 
