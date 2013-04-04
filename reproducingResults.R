@@ -2,11 +2,11 @@
 # annual average, and the third column is the number of earthquakes in the year. 
 # The last three columns are factors I use for constructing the plots themselves, 
 # so ignore those.
-dfG <- read.table('ssn-rank.all', col.names=c('rank', 'value', 'neqks', 
+dfG <- read.table('data/ssn-rank.all', col.names=c('rank', 'value', 'neqks', 
                                               'ignore1', 'ignore2', 'ignore3'))
-dfV <- read.table('vel-rank.all', col.names=c('rank', 'value', 'neqks', 
+dfV <- read.table('data/vel-rank.all', col.names=c('rank', 'value', 'neqks', 
                                               'ignore1', 'ignore2', 'ignore3'))
-dfAA <- read.table('mag-rank.all', col.names=c('rank', 'value', 'neqks', 
+dfAA <- read.table('data/mag-rank.all', col.names=c('rank', 'value', 'neqks', 
                                                'ignore1', 'ignore2', 'ignore3'))
 
 # We're going to compare samples above the median value and below the median value
