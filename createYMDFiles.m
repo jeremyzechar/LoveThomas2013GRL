@@ -87,7 +87,7 @@ ylabel('average sunspot number per year')
 % %% OUT
 % 
 % fout = fopen('data/EQs-day','w');
-% for i = 1:length(EQs_mon)
+% for i = 1:length(EQs_day)
 %     fprintf(fout,'%4d %2d %2d %1d\n',EQs_day(i,1:4));
 % end
 % fclose(fout);
