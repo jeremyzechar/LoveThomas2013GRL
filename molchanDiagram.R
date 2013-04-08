@@ -9,7 +9,7 @@
 # thresholds list
 # instantiate arrays for tau and nu; they can be the same length as the number 
 # of unique thresholds + 1; the first point is nu = 1, tau = 0.
-# now go through each threshold value; 
+# now go through each threshold value (from the biggest to the smallest); 
 # tau = sum(which(alarmfunction > threshold)) / length(alarmfunction); 
 # nu = 1 - sum(eqks[which(alarmfunction > threshold)]) / N, where N = sum(eqks)
 molchanDiagram <- function(catalog, alarmFunction) {
