@@ -84,44 +84,30 @@ ylabel('average sunspot number per year')
 
 
 
-% %% OUT
-% 
+%% OUT
+
 % fout = fopen('data/EQs-day','w');
-% for i = 1:length(EQs_day)
-%     fprintf(fout,'%4d %2d %2d %1d\n',EQs_day(i,1:4));
-% end
+% fprintf(fout,'%4d %2d %2d %1d\n',EQs_day(:,1:4)');
 % fclose(fout);
-%
+% 
 % fout = fopen('data/EQs-mon','w');
-% for i = 1:length(EQs_mon)
-%     fprintf(fout,'%4d %2d %2d\n',EQs_mon(i,:));
-% end
+% fprintf(fout,'%4d %2d %2d\n',EQs_mon');
 % fclose(fout);
 % 
 % fout = fopen('data/EQs-year','w');
-% for i = 1:length(EQs_year)
-%     fprintf(fout,'%4d %2d\n',EQs_year(i,:));
-% end
+% fprintf(fout,'%4d %2d\n',EQs_year');
 % fclose(fout);
 % 
 % fout = fopen('data/SSN-mon','w');
-% for i = 1:length(SSN_mon)
-%     fprintf(fout,'%4d %2d %3.1f\n',SSN_mon(i,:));
-% end
+% fprintf(fout,'%4d %2d %3.1f\n',SSN_mon');
 % fclose(fout);
-% fout = fopen(sprintf('data/SSN-mon-%d',BIN),'w');
-% for i = 1:length(SSN_monbin)
-%     fprintf(fout,'%4d %2d %3d\n',SSN_mon_discr(i,:));
-% end
+% fout = fopen(sprintf('data/SSN-mon-%d',Discretize),'w');
+% fprintf(fout,'%4d %2d %3d\n',SSN_mon_discr');
 % fclose(fout);
 % 
 % fout = fopen('data/SSN-year','w');
-% for i = 1:length(SSN_year)
-%     fprintf(fout,'%4d %3.1f\n',SSN_year(i,:));
-% end
+% fprintf(fout,'%4d %3.1f\n',SSN_year');
 % fclose(fout);
-% fout = fopen(sprintf('data/SSN-year-%d',BIN),'w');
-% for i = 1:length(SSN_yearbin)
-%     fprintf(fout,'%4d %3d\n',SSN_year_discr(i,:));
-% end
+% fout = fopen(sprintf('data/SSN-year-%d',Discretize),'w');
+% fprintf(fout,'%4d %3d\n',SSN_year_discr');
 % fclose(fout);
